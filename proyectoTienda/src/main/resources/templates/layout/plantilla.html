@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Moda Deportiva Store</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <header th:fragment="header" class="header">
+            <nav class="nav">
+                <a th:href="@{/}" class="logo nav-link">Moda Deportiva Store</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a th:href="@{/cliente/listado}" class="nav-menu-link nav-link">Clientes</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a th:href="@{/articulo/listado}" class="nav-menu-link nav-link">Articulos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <footer th:fragment="footer" class="footer">
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos una empresa que te brinda la posibilidad de traerte tu ropa deportiva, para hombre y mujer</p>
+            </div>
+            <div class="box">
+                <h2>CONTACTANOS</h2>
+                <p>Instagram @modadeportivastore</p>
+            </div>
+            <p>&COPY; Derechos Reservados 2022</p>
+        </footer>
+        
+</body>
+</html>
