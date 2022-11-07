@@ -56,3 +56,39 @@ img{
     text-align: center;
     margin: auto;
 }
+
+.menu_link{
+    padding: 20px;
+    color: wheat;
+    position: relative;
+    display: block;
+}
+
+.menu_link:hover{
+    background: white;
+    color: #024070;
+}
+
+.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-menu{
+    font-size: 1.5em;
+    border: 1px solid darkslateblue;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: autoM
+}
+
+.main-header_btn{
+    display: block;
+    padding: 10px 30ox;
+    color: #024070;
+    border: 1px solid saddlebrown;
+    test-decoration: none;
+}
+
+
