@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Moda Deportiva Store</title>
+        <meta charset="UTF-8">
+            
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <div class="contenido">
+        <h2>Informacion de nuestros articulos de ropa</h2>
+        <a th:href="@{/articulo/nuevo}">Añadir otro articulo de vestimenta</a>
+        <div th:if="${articulos !=null and !articulos.empty}">
+            <table border="1">
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Existencias</th>                          
+                    <th>Eliminar</th>                    
+
+                </tr>
+                <tr th:each="articulo : ${articulos}">
+                    
+                    <td>[[${articulo.descripcion}]]</td>
+                     <td style="text-align: right">[[${#numbers.formatDecimal(articulo.precio,3,2)}]]</td>
+                    <td style="text-align: center">[[${articulo.existencias}]]</td>                  
+                    <td><a th:href="@{/articulo/eliminar/} + ${articulo.idArticulo}">Eliminar</a></td>
+                    
+                </tr>
+            </table>
+        </div>
+        <footer th:replace="layout/plantilla :: footer"/>
+    </body>
+</html>
