@@ -12,7 +12,8 @@ public class Cliente implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCliente;
+    @Column(name="ID_Cliente")
+    private Long ID_Cliente;
     private String nombre;
     private String apellidos;
     private String correo;
@@ -26,6 +27,10 @@ public class Cliente implements Serializable{
         this.apellidos = apellidos;
         this.correo = correo;
         this.telefono = telefono;
+    }
+
+    public Cliente getCliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     

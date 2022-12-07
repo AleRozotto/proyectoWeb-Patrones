@@ -36,7 +36,6 @@ public class ClienteServiceImpl implements ClienteService{
     @Override
     @Transactional(readOnly = true)
     public Cliente getCliente(Cliente cliente) {
-        return clienteDao.findById(cliente.getIdCliente()).orElse(null);
+        return clienteDao.findById(cliente.getID_Cliente()).orElse(null);
     }
-   // getIdCliente()
 }
